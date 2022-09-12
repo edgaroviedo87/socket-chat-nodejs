@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Google Sign in</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Google Auth APi -->
+    <meta name="google-signin-client_id" content="142380999315-umgqvjbtn3n92t29088d2mph4998btrv.apps.googleusercontent.com"></meta>
+    
+</head>
+
+<body class="container">
+
+
+    <div class="row mt-5">
+
+        <!-- Google authentication -->
+        <div class="col-sm-6">
+
+            <h1>Google Sign in</h1>
+            <hr>
+            <br>
+
+            <div id="g_id_onload" 
+                data-client_id="142380999315-umgqvjbtn3n92t29088d2mph4998btrv.apps.googleusercontent.com" 
+                data-auto_prompt="false" 
+                data-callback="handleCredentialResponse">
+            </div>
+            <div class="g_id_signin" 
+                data-type="standard" 
+                data-size="large" 
+                data-theme="outline" 
+                data-text="sign_in_with" 
+                data-shape="rectangular" 
+                data-logo_alignment="left">
+            </div>
+
+            <br>
+            <br>
+
+            <button id="g_id_signout" type="button" class="btn btn-primary">Sign Out</button>
+
+        </div>
+
+        <!-- Email authentication -->
+        <div class="col-sm-6">
+
+            <h1>Login manual</h1>
+            <hr>
+            <br>
+
+            <form class="d-grid">
+                <input type="text" name="correo" class="form-control mb-2" placeholder="Correo">
+                <input type="text" name="password" class="form-control mb-2" placeholder="Password">
+
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+
+            </form>
+            
+        </div>
+
+    </div>
+    
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>    
+    
+    <script src="./js/auth.js"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>
